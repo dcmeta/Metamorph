@@ -1,5 +1,5 @@
 # Metamorph
-Framework and tool for developing java web
+Framework and tool for developing java web.<br>
 <b>You can generate all table become model, DAO, controller, and CRUD pages by running 1 command.</b>
 
 See more detail documentation at : 
