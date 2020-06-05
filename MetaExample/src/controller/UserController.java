@@ -14,7 +14,7 @@ public class UserController
     @metamorph.annotation.PostMethod(url = "/store")
     public void store(
         @metamorph.annotation.RequestBody
-        model.User user) {
+        entity.User user) {
         dao.UserDAO dao = new dao.UserDAO();
         dao.save(user);
         String cp = requestResponse.getRequest().getContextPath();
@@ -24,7 +24,7 @@ public class UserController
     @metamorph.annotation.PostMethod(url = "/update")
     public void update(
         @metamorph.annotation.RequestBody
-        model.User user) {
+        entity.User user) {
         dao.UserDAO dao = new dao.UserDAO();
         dao.update(user);
         String cp = requestResponse.getRequest().getContextPath();
@@ -36,9 +36,9 @@ public class UserController
         @metamorph.annotation.URLVariable
         Integer id) {
         dao.UserDAO dao = new dao.UserDAO();
-        model.User result = dao.getById(id);
+        entity.User result = dao.getById(id);
         dao.RoleDAO roleDAO = new dao.RoleDAO();
-        List<model.Role> role = roleDAO.getAll();
+        List<entity.Role> role = roleDAO.getAll();
         requestResponse.getRequest().setAttribute("role", role);
         requestResponse.getRequest().setAttribute("result", result);
         requestResponse.forward("/page/edit_user_page.jsp");
@@ -47,7 +47,7 @@ public class UserController
     @metamorph.annotation.GetMethod(url = "/show")
     public void show() {
         dao.UserDAO dao = new dao.UserDAO();
-        List<model.User> result = dao.getAll();
+        List<entity.User> result = dao.getAll();
         requestResponse.getRequest().setAttribute("result", result);
         requestResponse.forward("/page/table_user_page.jsp");
     }
@@ -57,13 +57,13 @@ public class UserController
         @metamorph.annotation.URLVariable
         Integer id) {
         dao.UserDAO dao = new dao.UserDAO();
-        model.User result = dao.getById(id);
+        entity.User result = dao.getById(id);
     }
 
     @metamorph.annotation.GetMethod(url = "/create")
     public void create() {
         dao.RoleDAO roleDAO = new dao.RoleDAO();
-        List<model.Role> role = roleDAO.getAll();
+        List<entity.Role> role = roleDAO.getAll();
         requestResponse.getRequest().setAttribute("role", role);
         requestResponse.forward("/page/create_user_page.jsp");
     }

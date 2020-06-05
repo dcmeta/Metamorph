@@ -4,12 +4,12 @@ package dao;
 import metamorph.dao.DAO;
 
 public class UserDAO
-    extends DAO<model.User>
+    extends DAO<entity.User>
 {
 
 
     public UserDAO() {
-        super(new model.User());
+        super(new entity.User());
     }
 
 }

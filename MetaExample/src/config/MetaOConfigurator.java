@@ -1,10 +1,10 @@
 
 package config;
 
+import entity.Role;
+import entity.User;
 import metamorph.utility.MetamorphNest;
 import metamorph.utility.MetamorphStarter;
-import model.Role;
-import model.User;
 
 public class MetaOConfigurator
     extends MetamorphStarter

@@ -1,5 +1,5 @@
 
-package model;
+package entity;
 
 import java.util.Date;
 import metamorph.annotation.AutoGenerate;
@@ -19,7 +19,7 @@ public class User {
     @metamorph.annotation.Column(name = "password")
     private String password;
     @ForeignKey(table_reference = "role", reference_column = "role_id", column = "role_id", class_reference = Role.class)
-    private model.Role roleId;
+    private entity.Role roleId;
     @metamorph.annotation.Column(name = "created_at")
     @metamorph.annotation.Timestamp(name = "create")
     private Date createdAt;
@@ -51,11 +51,11 @@ public class User {
         this.password = password;
     }
 
-    public model.Role getRoleId() {
+    public entity.Role getRoleId() {
         return roleId;
     }
 
-    public void setRoleId(model.Role roleId) {
+    public void setRoleId(entity.Role roleId) {
         this.roleId = roleId;
     }
 

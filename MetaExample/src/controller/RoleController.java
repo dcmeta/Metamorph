@@ -14,7 +14,7 @@ public class RoleController
     @metamorph.annotation.PostMethod(url = "/store")
     public void store(
         @metamorph.annotation.RequestBody
-        model.Role role) {
+        entity.Role role) {
         dao.RoleDAO dao = new dao.RoleDAO();
         dao.save(role);
         String cp = requestResponse.getRequest().getContextPath();
@@ -24,7 +24,7 @@ public class RoleController
     @metamorph.annotation.PostMethod(url = "/update")
     public void update(
         @metamorph.annotation.RequestBody
-        model.Role role) {
+        entity.Role role) {
         dao.RoleDAO dao = new dao.RoleDAO();
         dao.update(role);
         String cp = requestResponse.getRequest().getContextPath();
@@ -36,7 +36,7 @@ public class RoleController
         @metamorph.annotation.URLVariable
         Integer id) {
         dao.RoleDAO dao = new dao.RoleDAO();
-        model.Role result = dao.getById(id);
+        entity.Role result = dao.getById(id);
         requestResponse.getRequest().setAttribute("result", result);
         requestResponse.forward("/page/edit_role_page.jsp");
     }
@@ -44,7 +44,7 @@ public class RoleController
     @metamorph.annotation.GetMethod(url = "/show")
     public void show() {
         dao.RoleDAO dao = new dao.RoleDAO();
-        List<model.Role> result = dao.getAll();
+        List<entity.Role> result = dao.getAll();
         requestResponse.getRequest().setAttribute("result", result);
         requestResponse.forward("/page/table_role_page.jsp");
     }
@@ -54,7 +54,7 @@ public class RoleController
         @metamorph.annotation.URLVariable
         Integer id) {
         dao.RoleDAO dao = new dao.RoleDAO();
-        model.Role result = dao.getById(id);
+        entity.Role result = dao.getById(id);
     }
 
     @metamorph.annotation.GetMethod(url = "/create")
