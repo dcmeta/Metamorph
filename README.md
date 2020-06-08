@@ -1,6 +1,6 @@
 # Metamorph
 Framework and tool for developing java web.<br>
-<b>You can generate all tables become model, DAO, controller, and CRUD pages by running 1 command.</b>
+<b>You can generate all tables become entity, DAO, controller, and CRUD pages by running 1 command.</b>
 
 Source Code : https://github.com/dcmeta/MetamorphCode<br>
 See more detail documentation at : http://18.163.239.181
@@ -24,7 +24,7 @@ See more detail documentation at : http://18.163.239.181
 <ol>
     <li>Ensure your terminal is already in your project directory.</li>
     <li>Run this command <b>"mg -a"</b></li>
-    <li>Then your all of your components should be prepared. You can ensure it by seeing your src folder, in that folder should has <b>dao</b>, <b>model</b>, <b>controller</b>, and <b>config</b> folder.</li>
+    <li>Then your all of your components should be prepared. You can ensure it by seeing your src folder, in that folder should has <b>dao</b>, <b>entity</b>, <b>controller</b>, and <b>config</b> folder.</li>
 </ol>
 
 <h5>Finishing</h5>
