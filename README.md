@@ -9,8 +9,7 @@ See more detail documentation at : http://18.163.239.181
 <h5>Preparation</h5>
 <ol>
     <li>Open your Eclipse and make your Dynamic Web Project.</li>
-    <li>Extract the metamorph bundle to your project directory.</li>
-    <li>Extract bundle.zip to your WebContent directory.</li>
+    <li>Move the metamorph generator tool to your project directory.</li>
     <li>Rename your metamorphGenerator jar become metaGenerator.jar</li>
     <li>Open your command prompt (for Windows user) or terminal (for Linux or Mac user)</li>
     <li>From your terminal, go to your project directory, then run this <b>"java -jar metaGenerator.jar"</b></li>
