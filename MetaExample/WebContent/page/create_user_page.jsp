@@ -19,10 +19,8 @@
 			          <div class='form-group'>
 Username</br>
 <input name='username' class='form-control' placeholder='Username' required/></div><div class='form-group'>
-Password</br>
-<input name='password' class='form-control' placeholder='Password' required/></div><div class='form-group'>
-Role Id</br>
-<select name='roleId' class='form-control' required> <c:forEach items="${role }" var='role' varStatus='vss'><option value=${role.roleId }>${role.roleId }</option></c:forEach></select></div>
+Userpass</br>
+<input name='userpass' class='form-control' placeholder='Userpass' required/></div>
 			          <input type="submit" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" value="Add New Data">
 			         </form>
 		     	</div>

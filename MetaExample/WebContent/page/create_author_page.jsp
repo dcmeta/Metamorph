@@ -15,12 +15,10 @@
 	        <div class="row">
 	            <div class="col-lg-6">
 	               <div class="p-5">
-			        <form class="user" method="POST" action="${pageContext.request.contextPath}/user/update">
-			          <input type='hidden' name='id' value='${result.id}'/></br><div class='form-group'>
-Username</br>
-<input name='username' value='${result.username}' class='form-control' placeholder='Username' required/></div><div class='form-group'>
-Userpass</br>
-<input name='userpass' value='${result.userpass}' class='form-control' placeholder='Userpass' required/></div>
+			        <form class="user" method="POST" action="store">
+			          <div class='form-group'>
+Authorname</br>
+<input name='authorname' class='form-control' placeholder='Authorname' required/></div>
 			          <input type="submit" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" value="Add New Data">
 			         </form>
 		     	</div>

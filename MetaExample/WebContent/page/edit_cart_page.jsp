@@ -15,12 +15,14 @@
 	        <div class="row">
 	            <div class="col-lg-6">
 	               <div class="p-5">
-			        <form class="user" method="POST" action="${pageContext.request.contextPath}/user/update">
+			        <form class="user" method="POST" action="${pageContext.request.contextPath}/cart/update">
 			          <input type='hidden' name='id' value='${result.id}'/></br><div class='form-group'>
-Username</br>
-<input name='username' value='${result.username}' class='form-control' placeholder='Username' required/></div><div class='form-group'>
-Userpass</br>
-<input name='userpass' value='${result.userpass}' class='form-control' placeholder='Userpass' required/></div>
+Book Name</br>
+<input name='bookName' value='${result.bookName}' class='form-control' placeholder='Book Name' required/></div><div class='form-group'>
+Book Id</br>
+<input name='bookId' value='${result.bookId}' class='form-control' placeholder='Book Id' required/></div><div class='form-group'>
+Num</br>
+<input name='num' value='${result.num}' class='form-control' placeholder='Num' required/></div>
 			          <input type="submit" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" value="Add New Data">
 			         </form>
 		     	</div>

@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<h1 class="h3 mb-2 text-gray-800">user Table</h1>
+<h1 class="h3 mb-2 text-gray-800">bookinfo Table</h1>
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
   <h1 class="h3 mb-0 text-gray-800"></h1>
   <a href='create' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm'><i class='text-white-50'></i> Add New Data</a>
@@ -16,18 +16,22 @@
      <div class="table-responsive">
        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
          <thead>
-<th>Id</th>
-<th>Username</th>
-<th>Userpass</th>
+<th>Bookid</th>
+<th>Bookname</th>
+<th>Bookauthor</th>
+<th>Bookpubdate</th>
+<th>Bookstock</th>
+<th>Bookprice</th>
+<th>Bookurl</th>
 <th>Update</th>
 <th>Delete</th>
          </thead>
          <tbody>
 <c:forEach items="${result }" var="result" varStatus="vss">
 <tr>
-<td>${vss.count}</td><td>${result.username }</td><td>${result.userpass }</td>
-<td><a href='edit/${result.id}' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm'><i class='text-white-50'></i> Update</a></td>
-<td><a href='delete/${result.id}' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm'><i class='text-white-50'></i> Delete</a></td>
+<td>${vss.count}</td><td>${result.bookname }</td><td>${result.bookauthor }</td><td>${result.bookpubdate }</td><td>${result.bookstock }</td><td>${result.bookprice }</td><td>${result.bookurl }</td>
+<td><a href='edit/${result.bookid}' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm'><i class='text-white-50'></i> Update</a></td>
+<td><a href='delete/${result.bookid}' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm'><i class='text-white-50'></i> Delete</a></td>
 </tr>
 </c:forEach>
          </tbody>

@@ -1,7 +1,9 @@
 
 package config;
 
-import controller.RoleController;
+import controller.AuthorController;
+import controller.BookinfoController;
+import controller.CartController;
 import controller.UserController;
 import metamorph.utilitycontroller.ControllerConfigurator;
 import metamorph.utilitycontroller.ControllerMap;
@@ -14,7 +16,9 @@ public class MetaOControllerConfigurator
     @Override
     public void config() {
         ControllerMap controllerMap = new ControllerMap();
-        controllerMap.addController(RoleController.class);
+        controllerMap.addController(AuthorController.class);
+        controllerMap.addController(BookinfoController.class);
+        controllerMap.addController(CartController.class);
         controllerMap.addController(UserController.class);
         controllerMap.process();
     }
